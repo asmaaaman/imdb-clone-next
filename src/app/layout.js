@@ -1,16 +1,8 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "next-themes";
+
 import "./globals.css";
-import Headr from "./components/Headr";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Header from "./components/Header";
+import Provider from "@/ThemeProvider";
 
 export const metadata = {
   title: "IMDB Clone",
@@ -19,12 +11,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Headr />
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <Provider>
+          <Header />
+          {children}
+        </Provider>
       </body>
     </html>
   );
