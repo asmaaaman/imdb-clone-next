@@ -1,8 +1,7 @@
-import { ThemeProvider } from "next-themes";
-
-import "./globals.css";
 import Header from "./components/Header";
 import Provider from "@/ThemeProvider";
+import Navbar from "./components/Navbar";
+import "./globals.css";
 
 export const metadata = {
   title: "IMDB Clone",
@@ -15,6 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <Provider>
           <Header />
+          <Navbar />
           {children}
         </Provider>
       </body>

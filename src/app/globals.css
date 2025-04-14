@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* @layer utilities {
+  .mode-dark {
+    @apply bg-red-900 text-white;
+  }
+
+  .mode-light {
+    @apply bg-white text-black;
+  }
+} */
