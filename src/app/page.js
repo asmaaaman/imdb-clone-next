@@ -1,4 +1,4 @@
-import MoviesCard from "./components/MoviesCard";
+import MoviesList from "./components/MoviesList";
 
 const API_KEY = process.env.API_KEY;
 
@@ -19,7 +19,7 @@ export default async function Home({ searchParams }) {
   const results = data.results;
   return (
     <div>
-      <MoviesCard results={results} />
+      <MoviesList results={results} />
     </div>
   );
 }
