@@ -12,7 +12,7 @@ const MovieDetails = async ({ params }) => {
     throw new Error("Failed to fetch data ");
   }
   const movie = await res.json();
-  console.log("movie", movie);
+
   return (
     <div className="w-full">
       <div
