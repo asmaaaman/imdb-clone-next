@@ -1,7 +1,4 @@
 import MoviesList from "./components/MoviesList";
-import SearchBar from "./components/SearchBar";
-
-import SearchResult from "./SearchResult";
 
 const API_KEY = process.env.API_KEY;
 
